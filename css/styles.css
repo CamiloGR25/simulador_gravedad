@@ -1,0 +1,7 @@
+.btn_Menu{
+    float: left; /*se ponen en fila no columna*/
+}
+#menu{
+    margin-left: 10%;
+    margin-top: 3%;
+}
