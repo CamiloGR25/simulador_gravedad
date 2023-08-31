@@ -14,14 +14,15 @@ function simulador(){
             bandera=true
            
         }
-    },tiempo*100)
+    },500/(tiempo*1000))
 }
 function ajustarDatos(){
    document.querySelector(".modal-body").style.marginBottom="500px";
-   altura=20;
-   gravedad=9,807
-   velocidad=Math.sqrt(2*altura*gravedad);
+   altura=2;
+   gravedad=9,8
    tiempo=Math.sqrt((2*altura)/gravedad);
+   velocidad=gravedad*tiempo;
+   
    document.getElementById("titulo").innerText+="la tierra"
    if(bandera){
     document.querySelector(".modal-body").style.marginBottom="0px";
