@@ -14,8 +14,11 @@
 
     <div id="menu">
         <center>
-            <h1>SELECCIONE EL PLANETA PARA PROBAR LA GRAVEDAD</h1><br><br>
+            <h1>SELECCIONE LA GRAVEDAD DESEADA:</h1><br>
+            <label for="altura">Altura deseada:</label>
+            <input type="number" id="altura"><br> <br> <br>
         </center>
+
         <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#tierra"
             onclick="ajustarDatos()">
             <h2>Planeta tierra:</h2>
@@ -37,7 +40,7 @@
         <button type="button" class="btn btn-primary" id="saturno">
             <h2>Planeta saturno:</h2>
             <img src="img/saturno.png" alt="img planeta saturno" width="200px" height="200px">
-            <p>gravedad de jupiter: 10,44 m/s²</p>
+            <p>gravedad de saturno: 10,44 m/s²</p>
         </button>
 
         <button type="button" class="btn btn-primary" id="luna">
@@ -47,7 +50,7 @@
         </button>
     </div>
 
-    <div class="modal fullscreen-modal fade" id="tierra" tabindex="-1" aria-labelledby="tierra" aria-hidden="true">
+    <div class="modal fade" id="tierra" tabindex="-1" aria-labelledby="tierra" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header" id="titulo">
@@ -70,6 +73,7 @@
             </div>
         </div>
     </div>
+
 
 
 
