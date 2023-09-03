@@ -1,10 +1,10 @@
-contador=0;
-bandera=false;
-altura;
-gravedad;
-velocidad;
-tiempo;
-pixelMetros;
+var contador=0;
+var bandera=false;
+var altura;
+var gravedad;
+var velocidad;
+var tiempo;
+var pixelMetros;
 function simulador(){
     a=setInterval(function(){
         document.querySelector("#objeto").style.marginTop=contador+"px";
@@ -16,7 +16,7 @@ function simulador(){
             bandera=true
            
         }
-    },500/(tiempo*1000))
+    },pixelMetros/(tiempo*1000))
 }
 function guardarAltura(){
     altura=$("#altura").val();
@@ -24,51 +24,51 @@ function guardarAltura(){
 }
 function ajustarDatosMercurio(){
     gravedad=3.7;
-    document.getElementById("titulo").innerText+="la tierra";
-    ajustarDatos();
+    var planeta="mercurio";
+    ajustarDatos(planeta);
+    
 }
 function ajustarDatosVenus(){
     gravedad=8.87;
-    document.getElementById("titulo").innerText+="la tierra";
-    ajustarDatos();
+    var planeta="venus";
+    ajustarDatos(planeta);
 }
 function ajustarDatosTierra(){
     gravedad=9.807;
-    document.getElementById("titulo").innerText+="la tierra";
-    ajustarDatos();
+    var planeta="tierra";
+    ajustarDatos(planeta);
 }
 function ajustarDatosMarte(){
     gravedad=3.71;
-    document.getElementById("titulo").innerText+="Marte";
-  
-    ajustarDatos();
+    var planeta="marte";
+    ajustarDatos(planeta);
 }
 function ajustarDatosJupiter(){
     gravedad=24.79;
-    document.getElementById("titulo").innerText+="Jupiter";
-    ajustarDatos();
+    var planeta="jupiter";
+    ajustarDatos(planeta);
 }
 function ajustarDatosSaturno(){
     gravedad=10.44;
-    document.getElementById("titulo").innerText+="Saturno";
-    ajustarDatos();
+    var planeta="saturno";
+    ajustarDatos(planeta);
 }
 function ajustarDatosUrano(){
     gravedad=8.87;
-    document.getElementById("titulo").innerText+="Saturno";
-    ajustarDatos();
+    var planeta="urano";
+    ajustarDatos(planeta);
 }
 function ajustarDatosNeptuno(){
     gravedad=11.15;
-    document.getElementById("titulo").innerText+="Saturno";
-    ajustarDatos();
+    var planeta="neptuno";
+    ajustarDatos(planeta);
 }
 function ajustarDatosLuna(){
     gravedad=1.62;
-    document.getElementById("titulo").innerText+="Luna";
-    ajustarDatos();
+    var planeta="luna";
+    ajustarDatos(planeta);
 }
-function ajustarDatos(){
+function ajustarDatos(planeta){
    document.querySelector(".modal-body").style.marginBottom="500px";
    console.log(altura);
    pixelMetros=altura*100;
@@ -77,6 +77,8 @@ function ajustarDatos(){
    if(bandera){
     document.querySelector(".modal-body").style.marginBottom="0px";
    }   
+   document.getElementById("titulo").innerText=" ";
+   document.getElementById("titulo").innerText="Simulador de gravedad de "+planeta+":\nAltura:  "+altura+" m\nGravedad:  "+gravedad+" m/s²\nVelocidad:  "+velocidad+" m/s\nTiempo en caer:  "+tiempo+" s";
 }
 
 function reiniciar(){
