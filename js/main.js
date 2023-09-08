@@ -14,7 +14,6 @@ function simulador(){
             clearInterval(a);
             document.querySelector(".modal-body").style.marginBottom="0px";
             bandera=true
-           
         }
     },pixelMetros/(tiempo*1000))
 }
